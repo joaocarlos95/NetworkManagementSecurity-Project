@@ -1,0 +1,17 @@
+$TTL   60000
+@               IN      SOA     ns.gsr.    root.ns.gsr. (
+                        2017041201 ; serial
+                        28800 ; refresh
+                        14400 ; retry
+                        3600000 ; expire
+                        0 ; negative cache ttl
+                        )
+
+@               	IN      NS      ns.gsr.
+ns			IN	A	10.0.0.18
+
+contatudo		IN	NS	ns.contatudo.gsr.
+ns.contatudo		IN	A	10.0.2.97
+
+bomcliente		IN	NS	ns.bomcliente.gsr.
+ns.bomcliente		IN	A	10.0.0.2

@@ -1,0 +1,13 @@
+$TTL   60000
+@               IN      SOA     ns.bomcliente.gsr.    root.ns.boncliente.gsr. (
+                        2017041201 ; serial
+                        28800 ; refresh
+                        14400 ; retry
+                        3600000 ; expire
+                        0 ; negative cache ttl
+                        )
+
+@               	IN      NS      ns.bomcliente.gsr.
+ns			IN	A	10.0.0.2
+
+www			IN	CNAME	bomcliente.gsr.

@@ -1,0 +1,11 @@
+ip link set dev eth0 up
+ip link set dev eth1 up
+ip link set dev eth2 up
+
+brctl addbr SwitchBomCliente
+brctl addif SwitchBomCliente eth0
+brctl addif SwitchBomCliente eth1
+brctl addif SwitchBomCliente eth2
+
+ip link set dev SwitchBomCliente up
+

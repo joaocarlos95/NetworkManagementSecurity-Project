@@ -1,0 +1,14 @@
+$TTL   60000
+@               IN      SOA     ServidorDNSRoot.    root.ServidorDNSRoot. (
+                        2017041201 ; serial
+                        28800 ; refresh
+                        14400 ; retry
+                        3600000 ; expire
+                        0 ; negative cache ttl
+                        )
+
+@               	IN      NS      ServidorDNSRoot.
+ServidorDNSRoot		IN	A	10.0.0.18
+
+gsr			IN      NS      ns.gsr.
+ns.gsr.			IN	A	10.0.0.18
