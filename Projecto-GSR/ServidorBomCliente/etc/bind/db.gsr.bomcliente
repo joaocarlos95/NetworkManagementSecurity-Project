@@ -9,5 +9,3 @@ $TTL   60000
 
 @               	IN      NS      ns.bomcliente.gsr.
 ns			IN	A	10.0.0.2
-
-www			IN	CNAME	bomcliente.gsr.

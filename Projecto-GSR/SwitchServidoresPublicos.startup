@@ -1,0 +1,13 @@
+ip link set dev eth0 up
+ip link set dev eth1 up
+ip link set dev eth2 up
+ip link set dev eth3 up
+
+brctl addbr SwitchServidoresPublicos
+brctl addif SwitchServidoresPublicos eth0
+brctl addif SwitchServidoresPublicos eth1
+brctl addif SwitchServidoresPublicos eth2
+brctl addif SwitchServidoresPublicos eth3
+
+ip link set dev SwitchServidoresPublicos up
+

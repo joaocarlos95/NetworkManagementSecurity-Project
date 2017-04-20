@@ -4,8 +4,5 @@ ip link set dev eth0 up
 ip addr add dev eth1 10.0.0.1/29
 ip link set dev eth1 up
 
-ip route add 10.0.0.128/26 via 10.0.0.21
-ip route add 10.0.2.64/26 via 10.0.0.21
-ip route add 10.0.0.0/16 via 10.0.0.21
-ip route add 192.168.100.0/24 via 10.0.0.21
+ip route add 0.0.0.0/0 via 10.0.0.21
 
