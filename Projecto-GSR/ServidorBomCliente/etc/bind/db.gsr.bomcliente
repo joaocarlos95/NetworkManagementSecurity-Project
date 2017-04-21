@@ -8,4 +8,6 @@ $TTL   60000
                         )
 
 @               	IN      NS      ns.bomcliente.gsr.
-ns			IN	A	10.0.0.2
+ns					IN		A		10.0.0.2
+
+computador			IN		A		10.0.0.3

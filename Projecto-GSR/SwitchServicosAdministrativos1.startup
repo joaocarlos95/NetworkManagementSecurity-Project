@@ -10,4 +10,3 @@ brctl addif SwitchServicosAdministrativos1 eth2
 brctl addif SwitchServicosAdministrativos1 eth3
 
 ip link set dev SwitchServicosAdministrativos1 up
-

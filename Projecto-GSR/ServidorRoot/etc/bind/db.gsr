@@ -8,10 +8,12 @@ $TTL   60000
                         )
 
 @               	IN      NS      ns.gsr.
-ns			IN	A	10.0.0.18
+ns					IN		A		10.0.0.18
 
-contatudo		IN	NS	ns.contatudo.gsr.
-ns.contatudo		IN	A	10.0.2.97
+contatudo			IN		NS		ns1.contatudo.gsr.
+ns1.contatudo		IN		A		10.0.2.97
+contatudo			IN		NS		ns2.contatudo.gsr.
+ns2.contatudo		IN		A		10.0.2.98
 
-bomcliente		IN	NS	ns.bomcliente.gsr.
-ns.bomcliente		IN	A	10.0.0.2
+bomcliente			IN		NS		ns.bomcliente.gsr.
+ns.bomcliente		IN		A		10.0.0.2
