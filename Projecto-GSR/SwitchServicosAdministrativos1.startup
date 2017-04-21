@@ -1,0 +1,13 @@
+ip link set dev eth0 up
+ip link set dev eth1 up
+ip link set dev eth2 up
+ip link set dev eth3 up
+
+brctl addbr SwitchServicosAdministrativos1
+brctl addif SwitchServicosAdministrativos1 eth0
+brctl addif SwitchServicosAdministrativos1 eth1
+brctl addif SwitchServicosAdministrativos1 eth2
+brctl addif SwitchServicosAdministrativos1 eth3
+
+ip link set dev SwitchServicosAdministrativos1 up
+
