@@ -11,3 +11,5 @@ $TTL   60000
 ns					IN		A		10.0.0.2
 
 computador			IN		A		10.0.0.3
+
+www					IN		A		10.0.0.2

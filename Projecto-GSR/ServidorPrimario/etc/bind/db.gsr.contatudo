@@ -12,7 +12,11 @@ ns1							IN		A		10.0.2.97
 @               			IN      NS      ns2.contatudo.gsr.
 ns2							IN		A		10.0.2.98
 
-computadorDiretor			IN		A		10.0.2.113
+www				IN		A		10.0.2.98
+clientes			IN		A		10.0.2.98
+intranet			IN		A		10.0.2.98
+
+computadorDiretor		IN		A		10.0.2.113
 computadorRecursosHumanos	IN		A		10.0.2.114
 computadorContabilista1		IN		A		10.0.2.115
 
