@@ -7,18 +7,17 @@ $TTL   60000
                         0 ; negative cache ttl
                         )
 
-@               			IN      NS      ns1.contatudo.gsr.
-@							IN		MX 5	mail.contatudo.gsr.
+@               		IN      	NS      	ns1.contatudo.gsr.
+ns1				IN		A		10.0.2.97
+@               		IN      	NS      	ns2.contatudo.gsr.
+ns2				IN		A		10.0.2.98
+@				IN		MX 5		mail.contatudo.gsr.
 
-ns1							IN		A		10.0.2.97
-@               			IN      NS      ns2.contatudo.gsr.
-ns2							IN		A		10.0.2.98
+www				IN		A		10.0.2.98
+clientes			IN		A		10.0.2.98
+intranet			IN		A		10.0.2.98
 
-www							IN		A		10.0.2.98
-clientes					IN		A		10.0.2.98
-intranet					IN		A		10.0.2.98
-
-computadorDiretor			IN		A		10.0.2.113
+computadorDiretor		IN		A		10.0.2.113
 computadorRecursosHumanos	IN		A		10.0.2.114
 computadorContabilista1		IN		A		10.0.2.115
 
@@ -32,6 +31,6 @@ computadorContabilista3		IN		A		192.168.0.2
 computadorContabilista4		IN		A		192.168.0.9
 computadorContabilista5		IN		A		192.168.0.10
 
-imap			IN		A		10.0.2.97
+imap				IN		A		10.0.2.97
 pop				IN		A		10.0.2.97
-mail			IN 		A 		10.0.2.97
+mail				IN 		A 		10.0.2.97
