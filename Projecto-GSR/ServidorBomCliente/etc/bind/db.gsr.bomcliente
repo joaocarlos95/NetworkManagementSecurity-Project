@@ -8,8 +8,14 @@ $TTL   60000
                         )
 
 @               	IN      NS      ns.bomcliente.gsr.
+@					IN		MX 5	mail.bomcliente.gsr.
+
 ns					IN		A		10.0.0.2
 
 computador			IN		A		10.0.0.3
 
 www					IN		A		10.0.0.2
+
+imap			IN		A		10.0.0.2
+pop				IN		A		10.0.0.2
+mail			IN 		A 		10.0.0.2
