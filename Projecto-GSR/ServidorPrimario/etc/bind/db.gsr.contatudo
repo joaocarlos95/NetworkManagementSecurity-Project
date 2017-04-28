@@ -34,3 +34,5 @@ computadorContabilista5		IN		A		192.168.0.10
 imap				IN		A		10.0.2.97
 pop				IN		A		10.0.2.97
 mail				IN 		A 		10.0.2.97
+
+ftp 			IN 		A		192.168.0.17
