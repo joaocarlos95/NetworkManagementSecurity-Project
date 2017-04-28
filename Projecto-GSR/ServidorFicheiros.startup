@@ -10,3 +10,4 @@ adduser --disabled-password --gecos "" ftp2
 echo 'ftp2:pass' | chpasswd
 
 /etc/init.d/proftpd start
+/etc/init.d/snmpd start

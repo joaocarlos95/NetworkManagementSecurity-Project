@@ -44,3 +44,4 @@ echo 'geral:pass' | chpasswd
 /etc/init.d/bind9 start
 /etc/init.d/exim4 start
 /etc/init.d/inetd start
+/etc/init.d/snmpd start

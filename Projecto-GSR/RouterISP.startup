@@ -10,4 +10,7 @@ ip link set dev eth2 up
 ip route add 10.0.0.0/28 via 10.0.0.22
 ip route add 10.0.0.128/26 via 10.0.0.25
 ip route add 10.0.2.64/26 via 10.0.0.25
+ip route add 192.168.0.16/29 via 10.0.0.25
 ip route add 0.0.0.0/0 via 192.168.100.2
+
+/etc/init.d/snmpd start
