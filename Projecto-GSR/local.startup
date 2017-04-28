@@ -1,0 +1,22 @@
+# Descomentar a seguinte linha no ficheiro "/etc/sysctl.conf"
+
+net.ipv4.ip_forward=1
+
+
+
+# Adicionar ao ficheiro "/etc/rc.local" onde "wlo1" é a interface do
+# computador que está ligada à internet 
+
+echo 1 > /proc/sys/net/ipv4/ip_forwarding
+iptables --table nat --append POSTROUTING --out-interface wlo1 -j MASQUERADE
+iptables --append FORWARD --in-interface nk_tap_joaocarl -j ACCEPT
+
+
+
+# Adicionar os seguintes comandos no terminal onde nk_tap_facas é a interface
+# que liga o computador à rede emulada pelo netkit
+
+sudo route add -net 10.0.2.64 netmask 255.255.255.192 gw 192.168.100.1 dev nk_tap_joaocarl
+sudo route add -net 10.0.0.128 netmask 255.255.255.192 gw 192.168.100.1 dev nk_tap_joaocarl
+sudo route add -net 10.0.0.0 netmask 255.255.255.128 gw 192.168.100.1 dev nk_tap_joaocarl
+
