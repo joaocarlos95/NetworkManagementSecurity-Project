@@ -3,10 +3,15 @@ ip link set dev eth0 up
 
 ip route add 0.0.0.0/0 via 10.0.2.103
 
+adduser --disabled-password --gecos "" ss
+echo 'ss:pass' | chpasswd
+
+dpkg -i /hostlab/sudo_1.6.9p17-3_i386.deb
 
 /etc/init.d/bind9 start
 
 a2ensite contatudo.gsr.conf
 a2enmod ssl
+/etc/init.d/ssh start
 /etc/init.d/apache2 restart
 /etc/init.d/snmpd start

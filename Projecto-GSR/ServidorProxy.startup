@@ -3,4 +3,8 @@ ip link set dev eth0 up
 
 ip route add 0.0.0.0/0 via 10.0.2.103
 
+adduser --disabled-password --gecos "" spx
+echo 'spx:pass' | chpasswd
+
 /etc/init.d/squid start
+/etc/init.d/ssh start

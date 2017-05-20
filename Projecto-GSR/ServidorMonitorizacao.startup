@@ -10,4 +10,9 @@ ip route add 0.0.0.0/0 via 192.168.0.21
 env LANG=C /usr/bin/mrtg /root/mrtg.cfg --daemon
 indexmaker --output=/var/www/index.html /root/mrtg.cfg
 
+adduser --disabled-password --gecos "" sm
+echo 'sm:pass' | chpasswd
+
+dpkg -i /hostlab/sudo_1.6.9p17-3_i386.deb
+/etc/init.d/ssh start
 /etc/init.d/apache2 start
