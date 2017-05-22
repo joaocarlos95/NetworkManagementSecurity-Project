@@ -6,6 +6,11 @@ ip route add 0.0.0.0/0 via 10.0.2.103
 adduser --disabled-password --gecos "" ss
 echo 'ss:pass' | chpasswd
 
+chmod 700 /home/ss/.ssh
+chown -R ss:ss /home/ss/.ssh
+chmod 600 /home/ss/.ssh/authorized_keys
+chmod g-w,o-w /home/ss
+
 dpkg -i /hostlab/sudo_1.6.9p17-3_i386.deb
 
 /etc/init.d/bind9 start

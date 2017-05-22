@@ -12,6 +12,11 @@ echo 'ftp2:pass' | chpasswd
 adduser --disabled-password --gecos "" sf
 echo 'sf:pass' | chpasswd
 
+chmod 700 /home/sf/.ssh
+chown -R sf:sf /home/sf/.ssh
+chmod 600 /home/sf/.ssh/authorized_keys
+chmod g-w,o-w /home/sf
+
 dpkg -i /hostlab/sudo_1.6.9p17-3_i386.deb
 /etc/init.d/ssh start
 /etc/init.d/proftpd start
