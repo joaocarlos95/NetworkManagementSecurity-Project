@@ -1,38 +1,54 @@
 $TTL   60000
-@               IN      SOA     ns1.contatudo.gsr.    root.ns1.contatudo.gsr. (
-                        2017041201 ; serial
-                        28800 ; refresh
-                        14400 ; retry
-                        3600000 ; expire
-                        0 ; negative cache ttl
-                        )
+@               IN 			SOA     ns1.contatudo.gsr. 	root.ns1.contatudo.gsr. (
+								2017041201	; serial
+								28800 		; refresh
+								14400 		; retry
+								3600000		; expire
+								0 				; negative cache ttl
+								)
 
-@               		IN      	NS      	ns1.contatudo.gsr.
-ns1				IN		A		10.0.2.97
-@               		IN      	NS      	ns2.contatudo.gsr.
-ns2				IN		A		10.0.2.98
-@				IN		MX 5		mail.contatudo.gsr.
+@               					IN 		NS 		ns1.contatudo.gsr.
+ns1									IN 		A			10.0.2.97
+@               					IN 		NS      	ns2.contatudo.gsr.
+ns2									IN			A			10.0.2.98
+@										IN			MX 5		mail.contatudo.gsr.
 
-www				IN		A		10.0.2.98
-clientes			IN		A		10.0.2.98
-intranet			IN		A		10.0.2.98
+www									IN			A			10.0.2.98
+clientes								IN			A			10.0.2.98
+intranet								IN			A			10.0.2.98
 
-computadorDiretor		IN		A		10.0.2.113
-computadorRecursosHumanos	IN		A		10.0.2.114
-computadorContabilista1		IN		A		10.0.2.115
+computadorDiretor					IN			A			10.0.2.113
+computadorRecursosHumanos		IN			A			10.0.2.114
+computadorContabilista1			IN			A			10.0.2.115
 
-computadorVisitantes1		IN		A		10.0.2.81
-computadorVisitantes2		IN		A		10.0.2.82
-computadorVisitantes3		IN		A		10.0.2.65
-computadorVisitantes4		IN		A		10.0.2.66
+computadorVisitantes1			IN			A			10.0.2.81
+computadorVisitantes2			IN			A			10.0.2.82
+computadorVisitantes3			IN			A			10.0.2.65
+computadorVisitantes4			IN			A			10.0.2.66
 
-computadorContabilista2		IN		A		192.168.0.1
-computadorContabilista3		IN		A		192.168.0.2
-computadorContabilista4		IN		A		192.168.0.9
-computadorContabilista5		IN		A		192.168.0.10
+computadorContabilista2			IN			A			192.168.0.1
+computadorContabilista3			IN			A			192.168.0.2
+computadorContabilista4			IN			A			192.168.0.9
+computadorContabilista5			IN			A			192.168.0.10
 
-imap				IN		A		10.0.2.97
-pop				IN		A		10.0.2.97
-mail				IN 		A 		10.0.2.97
+imap									IN			A			10.0.2.97
+pop									IN			A			10.0.2.97
+mail									IN 		A 			10.0.2.97
 
-ftp 			IN 		A		192.168.0.17
+proxy									IN 		A			10.0.2.99
+ftp 									IN 		A			192.168.0.17
+
+routerSedeLisboa					IN 		A			10.0.0.133
+routerSedeLisboa					IN 		A			192.168.0.21
+routerSedeLisboa					IN 		A			10.0.2.103
+routerSedeLisboa					IN 		A			10.0.2.119
+routerSedeLisboa					IN 		A			10.0.0.25
+routerSedeLisboa					IN 		A			10.0.0.129
+
+routerEscritoriosLisboa			IN 		A			192.168.0.5
+routerEscritoriosLisboa			IN 		A			10.0.0.134
+routerEscritoriosLisboa			IN 		A			10.0.2.91
+
+routerEscritoriosPorto			IN 		A			192.168.0.13
+routerEscritoriosPorto			IN 		A			10.0.0.130
+routerEscritoriosPorto			IN 		A			10.0.2.75

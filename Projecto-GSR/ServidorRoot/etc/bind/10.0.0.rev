@@ -1,0 +1,26 @@
+$TTL   60000
+@					IN			SOA		ns.gsr.		root.ns.gsr. (
+							2017041201	; serial
+							28800 		; refresh
+							14400			; retry
+							3600000		; expire
+							0				; negative cache ttl
+							)
+
+@					IN			NS 		ns.gsr.
+
+17					IN 		PTR		routerISP.gsr.
+26					IN 		PTR		routerISP.gsr.
+21					IN 		PTR		routerISP.gsr.
+
+18					IN 		PTR		ns.gsr.
+
+128/26			IN			NS 		ns1.contatudo.gsr.
+128/26			IN			NS 		ns2.contatudo.gsr.
+
+25					IN			CNAME		25.128/26.2.0.10.IN-ADDR.ARPA.
+129				IN			CNAME		129.128/26.2.0.10.IN-ADDR.ARPA.
+130				IN			CNAME		130.128/26.2.0.10.IN-ADDR.ARPA.
+133				IN			CNAME		133.128/26.2.0.10.IN-ADDR.ARPA.
+134				IN			CNAME		134.128/26.2.0.10.IN-ADDR.ARPA.
+

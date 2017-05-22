@@ -1,19 +1,24 @@
 $TTL   60000
-@               IN      SOA     ns.gsr.    root.ns.gsr. (
-                        2017041201 ; serial
-                        28800 ; refresh
-                        14400 ; retry
-                        3600000 ; expire
-                        0 ; negative cache ttl
-                        )
+@              IN 		SOA			ns.gsr.			root.ns.gsr. (
+							2017041201 	; serial
+                     28800 		; refresh
+                     14400			; retry
+                     3600000 		; expire
+                     0 				; negative cache ttl
+                     )
 
-@               	IN      NS      ns.gsr.
-ns					IN		A		10.0.0.18
+@              	IN      	NS      		ns.gsr.
+ns						IN			A				10.0.0.18
 
-contatudo			IN		NS		ns1.contatudo.gsr.
-ns1.contatudo		IN		A		10.0.2.97
-contatudo			IN		NS		ns2.contatudo.gsr.
-ns2.contatudo		IN		A		10.0.2.98
+contatudo			IN			NS				ns1.contatudo.gsr.
+ns1.contatudo		IN			A				10.0.2.97
+contatudo			IN			NS				ns2.contatudo.gsr.
+ns2.contatudo		IN			A				10.0.2.98
 
-bomcliente			IN		NS		ns.bomcliente.gsr.
-ns.bomcliente		IN		A		10.0.0.2
+bomcliente			IN			NS				ns.bomcliente.gsr.
+ns.bomcliente		IN			A				10.0.0.2
+
+routerISP			IN			A				10.0.0.17
+routerISP			IN			A				10.0.0.26
+routerISP			IN			A				10.0.0.21
+routerISP			IN			A				192.168.100.1

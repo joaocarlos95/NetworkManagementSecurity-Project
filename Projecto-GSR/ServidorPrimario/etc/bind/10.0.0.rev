@@ -1,0 +1,17 @@
+$TTL   60000
+@				IN			SOA			ns1.contatudo.gsr.		root.ns1.contatudo.gsr. (
+							2017041201	; serial
+							28800			; refresh
+							14400			; retry
+							3600000		; expire
+							0				; negative cache ttl
+							)
+
+@				IN			NS 			ns1.contatudo.gsr.
+@				IN 		NS 			ns2.contatudo.gsr.
+
+25				IN			PTR			routerSedeLisboa.contatudo.gsr.
+129			IN			PTR			routerSedeLisboa.contatudo.gsr.
+130			IN			PTR			routerEscritoriosPorto.contatudo.gsr.
+133			IN			PTR			routerSedeLisboa.contatudo.gsr.
+134			IN			PTR			routerEscritoriosLisboa.contatudo.gsr.
