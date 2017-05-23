@@ -37,6 +37,7 @@ mail									IN 		A 			10.0.2.97
 
 proxy									IN 		A			10.0.2.99
 ftp 									IN 		A			192.168.0.17
+mrt 									IN 		A			192.168.0.18
 
 routerSedeLisboa					IN 		A			10.0.0.133
 routerSedeLisboa					IN 		A			192.168.0.21

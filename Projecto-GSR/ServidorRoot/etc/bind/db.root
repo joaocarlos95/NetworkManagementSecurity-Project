@@ -9,11 +9,11 @@
 .			172800	IN	RRSIG	DNSKEY 8 0 172800 20160525235959 20160511000000 19036 . eiTD0OB7H67EpFOVWtRl60LC+i48VxxXBdFvdyEORO49OskLCI434ki6RayGPLgSBYDxWLpHNx8EEbRIxEYgYP8ck4hmgTcax6qk5zhwKCAL8I0mOBeZJddIE+fKXFtA0+/ESzszlHfchI1z/RLuxGCkmkBAQto2cqhUbFsmTwOnJ6uu4bkSRYUw1YYOF1LHnieN9IJ5S/5r1T79cIiR2reGQN00nNCiHmKAItpU4WnWO3NYsJxfA8iMI6H9GT5yVSW7VnK8l24crKQcC51MjuZnPB1eGdXHh/HM3OKJ2aaa5jwRIb5jOltEOz7mhZfMDGTWbHqp1nQpt34QJBuhng==
 
 
-.			IN	NS	ServidorDNSRoot.
-ServidorDNSRoot.	IN	A	10.0.0.18
+.						IN		NS		ServidorDNSRoot.
+ServidorDNSRoot.	IN		A		10.0.0.18
 
-gsr			IN      NS      ns.gsr.
-ns.gsr.			IN	A	10.0.0.18
+gsr					IN    NS    ns.gsr.
+ns.gsr.				IN		A		10.0.0.18
 
 
 

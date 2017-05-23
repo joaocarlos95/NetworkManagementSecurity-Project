@@ -1,2 +1,2 @@
-.							IN			NS			ServidorDNSRoot.
-ServidorDNSRoot.		IN			A			10.0.0.18
+.						IN		NS		ServidorDNSRoot.
+ServidorDNSRoot.	IN		A		10.0.0.18

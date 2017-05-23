@@ -1,21 +1,22 @@
 $TTL   60000
-@               IN      SOA     ns.bomcliente.gsr.    root.ns.boncliente.gsr. (
-                        2017041201 ; serial
-                        28800 ; refresh
-                        14400 ; retry
-                        3600000 ; expire
-                        0 ; negative cache ttl
-                        )
+@              IN			SOA     		ns.bomcliente.gsr.    	root.ns.boncliente.gsr. (
+                 		2017041201	; serial
+                  	28800 		; refresh
+                 		14400 		; retry
+                  	3600000 		; expire
+                  	0 				; negative cache ttl
+                  	)			
 
-@               	IN      NS      ns.bomcliente.gsr.
-@					IN		MX 5	mail.bomcliente.gsr.
+@              		IN 		NS     	ns.bomcliente.gsr.
+@							IN			MX 5		mail.bomcliente.gsr.
 
-ns					IN		A		10.0.0.2
+routerBomCliente		IN			A			10.0.0.1
+ns							IN			A			10.0.0.2
+computador				IN			A			10.0.0.3
 
-computador			IN		A		10.0.0.3
+www						IN			A			10.0.0.2
 
-www					IN		A		10.0.0.2
-
-imap			IN		A		10.0.0.2
-pop				IN		A		10.0.0.2
-mail			IN 		A 		10.0.0.2
+imap						IN			A			10.0.0.2
+pop						IN			A			10.0.0.2
+mail						IN 		A 			10.0.0.2
+	

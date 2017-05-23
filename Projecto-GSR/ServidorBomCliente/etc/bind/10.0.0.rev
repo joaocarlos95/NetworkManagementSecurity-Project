@@ -1,0 +1,14 @@
+$TTL   60000
+@           IN			SOA     		ns.bomcliente.gsr.    	root.ns.boncliente.gsr. (
+                 		2017041201	; serial
+                  	28800 		; refresh
+                 		14400 		; retry
+                  	3600000 		; expire
+                  	0 				; negative cache ttl
+                  	)			
+
+@           IN 		NS     		ns.bomcliente.gsr.
+
+1				IN			PTR			routerBomCliente.bomcliente.gsr.
+2				IN			PTR			ns.bomcliente.gsr.
+3				IN			PTR			computador.bomcliente.gsr.

@@ -12,15 +12,21 @@ $TTL   60000
 17					IN 		PTR		routerISP.gsr.
 26					IN 		PTR		routerISP.gsr.
 21					IN 		PTR		routerISP.gsr.
+22					IN 		PTR		routerBomCliente.gsr.
+25					IN			PTR		routerSedeLisboa.contatudo.gsr.
 
 18					IN 		PTR		ns.gsr.
 
 128/26			IN			NS 		ns1.contatudo.gsr.
 128/26			IN			NS 		ns2.contatudo.gsr.
 
-25					IN			CNAME		25.128/26.2.0.10.IN-ADDR.ARPA.
-129				IN			CNAME		129.128/26.2.0.10.IN-ADDR.ARPA.
-130				IN			CNAME		130.128/26.2.0.10.IN-ADDR.ARPA.
-133				IN			CNAME		133.128/26.2.0.10.IN-ADDR.ARPA.
-134				IN			CNAME		134.128/26.2.0.10.IN-ADDR.ARPA.
+129				IN			CNAME		129.128/26.0.0.10.IN-ADDR.ARPA.
+130				IN			CNAME		130.128/26.0.0.10.IN-ADDR.ARPA.
+133				IN			CNAME		133.128/26.0.0.10.IN-ADDR.ARPA.
+134				IN			CNAME		134.128/26.0.0.10.IN-ADDR.ARPA.
 
+0/28				IN 		NS 		ns.bomcliente.gsr.
+
+1					IN 		CNAME		1.0/28.0.0.10.IN-ADDR.ARPA.
+2					IN 		CNAME		2.0/28.0.0.10.IN-ADDR.ARPA.
+3					IN			CNAME		3.0/28.0.0.10.IN-ADDR.ARPA.
