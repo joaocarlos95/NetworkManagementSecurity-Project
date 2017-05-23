@@ -44,6 +44,10 @@ echo 'geral:pass' | chpasswd
 adduser --disabled-password --gecos "" sp
 echo 'sp:pass' | chpasswd
 
+chmod 700 /root/.ssh
+chmod 700 /root/.ssh/id_rsa
+chmod 644 /root/.ssh/id_rsa.pub
+
 chmod 700 /home/sp/.ssh
 chown -R sp:sp /home/sp/.ssh
 chmod 600 /home/sp/.ssh/authorized_keys
