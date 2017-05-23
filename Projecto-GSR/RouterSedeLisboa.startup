@@ -18,6 +18,32 @@ ip link set dev eth5 up
 
 ip route add 0.0.0.0/0 via 10.0.0.26
 
+
+iptables -A FORWARD -s 192.168.0.0/16 -o eth4 -j DROP #limita acesso dos privados para fora da CT
+
+iptables -A FORWARD -d 192.168.0.0/16 -i eth4 -j DROP
+
+iptables -A FORWARD -s 10.0.2.64/27 -d 192.168.0.0/16 -j DROP
+
+iptables -A FORWARD -i eth4 -d 10.0.2.80/28 -j ACCEPT #tudo o q vem de fora da CT chega aos visitantes lisboa
+
+iptables -A FORWARD -o eth4 -s 10.0.2.80/28 -j ACCEPT #tudo o q vem de fora da CT chega aos visitantes lisboa
+
+iptables -A FORWARD -i eth4 -d 10.0.2.64/28 -j ACCEPT #tudo o q vem de fora da CT chega aos visitantes porto
+
+iptables -A FORWARD -o eth4 -s 10.0.2.64/28 -j ACCEPT #tudo o q vem de fora da CT chega aos visitantes porto
+
+iptables -A FORWARD -i eth4 -d 10.0.2.112/28 -m state --state NEW -j DROP
+
+iptables -A FORWARD -i eth4 -d 10.0.2.96/28 -p tcp --dport 53 -j DROP #domain
+
+iptables -A FORWARD -i eth4 -d 10.0.2.97 -p tcp --dport 110 -j DROP #pop3
+
+iptables -A FORWARD -i eth4 -d 10.0.2.96/28 -p tcp --dport 111 -j DROP #rpcbind
+
+iptables -A FORWARD -i eth4 -d 10.0.2.96/28 -p tcp --dport 199 -j DROP #smux
+
+
 /etc/init.d/zebra start
 /etc/init.d/dhcp3-server start
 /etc/init.d/snmpd start
