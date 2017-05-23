@@ -12,10 +12,12 @@ $TTL   60000
 17					IN 		PTR		routerISP.gsr.
 26					IN 		PTR		routerISP.gsr.
 21					IN 		PTR		routerISP.gsr.
+29					IN 		PTR		routerISP.gsr.
 22					IN 		PTR		routerBomCliente.gsr.
 25					IN			PTR		routerSedeLisboa.contatudo.gsr.
 
 18					IN 		PTR		ns.gsr.
+30					IN 		PTR		computadorAdministrador.gsr.
 
 128/26			IN			NS 		ns1.contatudo.gsr.
 128/26			IN			NS 		ns2.contatudo.gsr.
