@@ -18,30 +18,29 @@ ip link set dev eth5 up
 
 ip route add 0.0.0.0/0 via 10.0.0.26
 
+# Não faz override
+# Inicialmente, tudo da Contatudo tem acesso ao exterior
 
-iptables -A FORWARD -s 192.168.0.0/16 -o eth4 -j DROP #limita acesso dos privados para fora da CT
+# Bloquear tudo o que vai dos endereços privados para fora
+iptables -A FORWARD -o eth4 -s 192.168.0.0/16 -j DROP
 
-iptables -A FORWARD -d 192.168.0.0/16 -i eth4 -j DROP
+# Exterior tem acesso aos visitantes
+iptables -A FORWARD -i eth4 -d 10.0.2.64/27 -j ACCEPT
 
+# Visitantes sem acesso a privados
 iptables -A FORWARD -s 10.0.2.64/27 -d 192.168.0.0/16 -j DROP
 
-iptables -A FORWARD -i eth4 -d 10.0.2.80/28 -j ACCEPT #tudo o q vem de fora da CT chega aos visitantes lisboa
+# Permitir o acesso ao serviço HTTP(80), HTTPS(443) a partir do exterior
+# Permitir o acesso ao serviço email SMTP(143), IMAP(25) a partir do exterior
+# Permitir o acesso ao serviço DNS(53), VPN(1194), SSH(22) a partir do exterior
+iptables -A FORWARD -i eth4 -d 10.0.2.96/28 -p tcp -m multiport --dport 22,80,443,25,143,53,1194 -j ACCEPT
+iptables -A FORWARD -i eth4 -d 10.0.2.96/28 -p udp -m multiport --dport 22,80,443,25,143,53,1194 -j ACCEPT
 
-iptables -A FORWARD -o eth4 -s 10.0.2.80/28 -j ACCEPT #tudo o q vem de fora da CT chega aos visitantes lisboa
+# Garantir resposta
+iptables -A FORWARD -i eth4 -m state --state ESTABLISHED,RELATED -j ACCEPT
 
-iptables -A FORWARD -i eth4 -d 10.0.2.64/28 -j ACCEPT #tudo o q vem de fora da CT chega aos visitantes porto
-
-iptables -A FORWARD -o eth4 -s 10.0.2.64/28 -j ACCEPT #tudo o q vem de fora da CT chega aos visitantes porto
-
-iptables -A FORWARD -i eth4 -d 10.0.2.112/28 -m state --state NEW -j DROP
-
-iptables -A FORWARD -i eth4 -d 10.0.2.96/28 -p tcp --dport 53 -j DROP #domain
-
-iptables -A FORWARD -i eth4 -d 10.0.2.97 -p tcp --dport 110 -j DROP #pop3
-
-iptables -A FORWARD -i eth4 -d 10.0.2.96/28 -p tcp --dport 111 -j DROP #rpcbind
-
-iptables -A FORWARD -i eth4 -d 10.0.2.96/28 -p tcp --dport 199 -j DROP #smux
+# Bloquear tudo o que vem de fora
+iptables -A FORWARD -i eth4 -j DROP
 
 
 /etc/init.d/zebra start
