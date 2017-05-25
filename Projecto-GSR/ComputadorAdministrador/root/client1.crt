@@ -1,0 +1,70 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 2 (0x2)
+        Signature Algorithm: sha1WithRSAEncryption
+        Issuer: C=PT, ST=LS, L=LS, O=GSR, CN=GSR CA/emailAddress=ist@tecnico.ulisboa.pt
+        Validity
+            Not Before: May 24 19:36:24 2017 GMT
+            Not After : May 22 19:36:24 2027 GMT
+        Subject: C=PT, ST=LS, L=LS, O=GSR, CN=client1/emailAddress=ist@tecnico.ulisboa.pt
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+            RSA Public Key: (1024 bit)
+                Modulus (1024 bit):
+                    00:bc:c1:84:2b:d3:c4:a6:eb:67:ca:bc:54:a1:8a:
+                    d2:bb:82:b9:4a:33:a1:2f:b9:6a:e7:8e:db:db:a5:
+                    ca:15:c5:1d:ff:3c:5e:9b:1a:cf:58:0f:77:b0:29:
+                    5f:91:20:4a:7d:d6:5d:78:47:14:a2:da:6d:5e:f0:
+                    1b:20:ad:8a:18:6a:5f:ef:38:39:0a:84:a2:18:c9:
+                    42:b0:71:0d:22:ed:12:6d:e7:58:c6:22:06:73:7f:
+                    26:93:bc:78:84:f6:fa:f8:7d:9e:38:8b:96:54:a2:
+                    25:7e:b1:62:37:83:60:05:04:35:18:26:9c:8d:1a:
+                    a1:01:48:4f:94:5d:f5:af:25
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            Netscape Comment: 
+                Easy-RSA Generated Certificate
+            X509v3 Subject Key Identifier: 
+                F1:C2:F7:A3:C7:92:33:0F:26:25:9D:A0:45:CF:7E:B2:CF:63:B8:63
+            X509v3 Authority Key Identifier: 
+                keyid:AB:EB:E3:1C:6B:47:D2:D1:1D:20:6C:7A:DE:5F:FA:FA:75:72:0F:1D
+                DirName:/C=PT/ST=LS/L=LS/O=GSR/CN=GSR CA/emailAddress=ist@tecnico.ulisboa.pt
+                serial:AD:D4:B0:CC:1B:3A:FC:3A
+
+            X509v3 Extended Key Usage: 
+                TLS Web Client Authentication
+            X509v3 Key Usage: 
+                Digital Signature
+    Signature Algorithm: sha1WithRSAEncryption
+        9e:be:64:a5:a2:07:ad:67:74:95:bb:72:c6:01:49:15:43:66:
+        23:fd:06:55:50:a6:9f:27:89:b1:b9:ca:38:43:2e:ce:e6:da:
+        04:e2:77:0e:2d:03:0f:5e:89:86:6a:72:3a:c3:8a:b7:55:a3:
+        c0:18:e5:2e:8e:0c:49:1f:04:df:06:c0:a9:14:91:bf:08:2d:
+        70:6c:00:cc:e4:8f:86:fe:a9:2d:16:32:ec:64:14:ab:3e:32:
+        4a:aa:8f:cf:c2:74:8b:48:55:2e:60:03:8f:a8:17:b9:43:a5:
+        4c:ed:7d:2b:ec:68:a3:b2:4d:16:10:5c:b6:9b:f9:7b:13:d4:
+        9d:c0
+-----BEGIN CERTIFICATE-----
+MIIDdDCCAt2gAwIBAgIBAjANBgkqhkiG9w0BAQUFADBtMQswCQYDVQQGEwJQVDEL
+MAkGA1UECBMCTFMxCzAJBgNVBAcTAkxTMQwwCgYDVQQKEwNHU1IxDzANBgNVBAMT
+BkdTUiBDQTElMCMGCSqGSIb3DQEJARYWaXN0QHRlY25pY28udWxpc2JvYS5wdDAe
+Fw0xNzA1MjQxOTM2MjRaFw0yNzA1MjIxOTM2MjRaMG4xCzAJBgNVBAYTAlBUMQsw
+CQYDVQQIEwJMUzELMAkGA1UEBxMCTFMxDDAKBgNVBAoTA0dTUjEQMA4GA1UEAxMH
+Y2xpZW50MTElMCMGCSqGSIb3DQEJARYWaXN0QHRlY25pY28udWxpc2JvYS5wdDCB
+nzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAvMGEK9PEputnyrxUoYrSu4K5SjOh
+L7lq547b26XKFcUd/zxemxrPWA93sClfkSBKfdZdeEcUotptXvAbIK2KGGpf7zg5
+CoSiGMlCsHENIu0SbedYxiIGc38mk7x4hPb6+H2eOIuWVKIlfrFiN4NgBQQ1GCac
+jRqhAUhPlF31ryUCAwEAAaOCASEwggEdMAkGA1UdEwQCMAAwLQYJYIZIAYb4QgEN
+BCAWHkVhc3ktUlNBIEdlbmVyYXRlZCBDZXJ0aWZpY2F0ZTAdBgNVHQ4EFgQU8cL3
+o8eSMw8mJZ2gRc9+ss9juGMwgZ8GA1UdIwSBlzCBlIAUq+vjHGtH0tEdIGx63l/6
++nVyDx2hcaRvMG0xCzAJBgNVBAYTAlBUMQswCQYDVQQIEwJMUzELMAkGA1UEBxMC
+TFMxDDAKBgNVBAoTA0dTUjEPMA0GA1UEAxMGR1NSIENBMSUwIwYJKoZIhvcNAQkB
+FhZpc3RAdGVjbmljby51bGlzYm9hLnB0ggkArdSwzBs6/DowEwYDVR0lBAwwCgYI
+KwYBBQUHAwIwCwYDVR0PBAQDAgeAMA0GCSqGSIb3DQEBBQUAA4GBAJ6+ZKWiB61n
+dJW7csYBSRVDZiP9BlVQpp8nibG5yjhDLs7m2gTidw4tAw9eiYZqcjrDirdVo8AY
+5S6ODEkfBN8GwKkUkb8ILXBsAMzkj4b+qS0WMuxkFKs+Mkqqj8/CdItIVS5gA4+o
+F7lDpUztfSvsaKOyTRYQXLab+XsT1J3A
+-----END CERTIFICATE-----
