@@ -7,4 +7,4 @@ chmod 644 /root/.ssh/id_rsa.pub
 
 ip route add 0.0.0.0/0 via 10.0.0.29
 
-dpkg -i /resolvconf.deb
+dpkg -i openresolv_3.5.2-1_all.deb
