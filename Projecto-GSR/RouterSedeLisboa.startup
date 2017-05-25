@@ -17,6 +17,7 @@ ip addr add dev eth5 10.0.0.129/30
 ip link set dev eth5 up
 
 ip route add 0.0.0.0/0 via 10.0.0.26
+ip route add 10.0.2.128/28 via 10.0.2.98
 
 # Não faz override
 # Inicialmente, tudo da Contatudo tem acesso ao exterior
@@ -43,8 +44,16 @@ iptables -A FORWARD -i eth4 -d 10.0.2.99 -p udp --dport 22 -j ACCEPT
 iptables -A FORWARD -o eth4 -s 10.0.2.64/26 -j ACCEPT
 iptables -A FORWARD -o eth4 -s 10.0.0.128/26 -j ACCEPT
 
+# Redireccionar o HTTP dos visitantes para o Proxy
+iptables -t nat -A PREROUTING -s 10.0.2.64/27 -p tcp --dport 80 -d 10.0.2.98 -j DNAT --to-destination 10.0.2.99:3128
+iptables -t nat -A PREROUTING -s 10.0.2.64/27 -p udp --dport 80 -d 10.0.2.98 -j DNAT --to-destination 10.0.2.99:3128
+
 # Bloquear tudo o que vem de fora
 iptables -A FORWARD -i eth4 -j DROP
+
+# Bloquear o HTTP no secundário
+iptables -A FORWARD -d 10.0.2.98 -p udp --dport 80 -j DROP
+iptables -A FORWARD -d 10.0.2.98 -p tcp --dport 80 -j DROP
 
 # Bloquear tudo o que vai para fora
 iptables -A FORWARD -o eth4 -j DROP
