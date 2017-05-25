@@ -17,6 +17,7 @@ ip addr add dev eth5 10.0.0.129/30
 ip link set dev eth5 up
 
 ip route add 0.0.0.0/0 via 10.0.0.26
+ip route add 10.0.2.128/28 via 10.0.2.98
 
 # Não faz override
 # Inicialmente, tudo da Contatudo tem acesso ao exterior
