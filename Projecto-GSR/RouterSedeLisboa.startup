@@ -30,26 +30,29 @@ iptables -A FORWARD -i eth4 -d 10.0.2.64/27 -j ACCEPT
 # Visitantes sem acesso a privados
 iptables -A FORWARD -s 10.0.2.64/27 -d 192.168.0.0/16 -j DROP
 
-# Permitir o acesso ao serviço HTTP(80), HTTPS(443) a partir do exterior
-# Permitir o acesso ao serviço email SMTP(143), IMAP(25) a partir do exterior
-# Permitir o acesso ao serviço DNS(53), VPN(1194), SSH(22) a partir do exterior
-iptables -A FORWARD -i eth4 -d 10.0.2.96/28 -p tcp -m multiport --dports 22,80,443,25,143,53,1194 -j ACCEPT
-iptables -A FORWARD -i eth4 -d 10.0.2.96/28 -p udp -m multiport --dports 22,80,443,25,143,53,1194 -j ACCEPT
+# Permitir o acesso ao serviço SSH(22), DNS(53), SMTP(143), IMAP(25) a partir do exterior
+iptables -A FORWARD -i eth4 -d 10.0.0.97 -p tcp -m multiport --dport 25,53,143,22 -j ACCEPT
+iptables -A FORWARD -i eth4 -d 10.0.0.97 -p udp -m multiport --dport 25,53,143,22 -j ACCEPT
+
+# Permitir o acesso ao serviço SSH(22), DNS(53), HTTP(80), HTTPS(443), VPN(1194) a partir do exterior
+iptables -A FORWARD -i eth4 -d 10.0.0.98 -p tcp -m multiport --dport 53,80,443,22,1194 -j ACCEPT
+iptables -A FORWARD -i eth4 -d 10.0.0.98 -p udp -m multiport --dport 53,80,443,22,1194 -j ACCEPT
+
+# Permitir o acesso ao serviço SSH(22) a partir do exterior
+iptables -A FORWARD -i eth4 -d 10.0.0.99 -p tcp -m multiport --dport 22 -j ACCEPT
+iptables -A FORWARD -i eth4 -d 10.0.0.99 -p udp -m multiport --dport 22 -j ACCEPT
 
 # Garantir resposta
 iptables -A FORWARD -i eth4 -m state --state ESTABLISHED,RELATED -j ACCEPT
 
-# Permite os IPs de dentro chegarem a fora - Spoofing
-iptables -A FORWARD -o eth4 -s 10.0.2.64/26,10.0.0.128/26 -j ACCEPT
-# Bloquear tudo o que vai para fora - Spoofing
+# Permite os IPs de dentro sairem da Contatudo
+iptables -A FORWARD -o eth4 -s 10.0.2.64/26 -j ACCEPT
+iptables -A FORWARD -o eth4 -s 10.0.0.128/26 -j ACCEPT
+# Bloquear tudo o que vai para fora
 iptables -A FORWARD -o eth4 -j DROP
-
-# Nega os IPs de dentro chegarem a dentro da Contatudo - Spoofing
-iptables -A FORWARD -i eth4 -s 10.0.2.64/26,10.0.0.128/26,192.168.0.0/16 -j DROP
 
 # Bloquear tudo o que vem de fora
 iptables -A FORWARD -i eth4 -j DROP
-
 
 /etc/init.d/zebra start
 /etc/init.d/dhcp3-server start
