@@ -27,3 +27,5 @@ $TTL   60000
 103			IN			PTR			routerSedeLisboa.contatudo.gsr.
 91				IN			PTR			routerEscritoriosLisboa.contatudo.gsr.
 75				IN			PTR			routerEscritoriosPorto.contatudo.gsr.
+
+129			IN			PTR			vpn.contatudo.gsr.

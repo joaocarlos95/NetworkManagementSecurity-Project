@@ -53,3 +53,5 @@ routerEscritoriosLisboa			IN 		A			10.0.2.91
 routerEscritoriosPorto			IN 		A			192.168.0.13
 routerEscritoriosPorto			IN 		A			10.0.0.130
 routerEscritoriosPorto			IN 		A			10.0.2.75
+
+vpn								IN 		A			10.0.2.129
