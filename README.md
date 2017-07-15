@@ -1,37 +1,20 @@
-## Welcome to GitHub Pages
+# Network Management and Security Project (2016-2017)
 
-You can use the [editor on GitHub](https://github.com/joaocarlos95/NetworkManagementSecurity-Project/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+### Contributors
+- [@jtf16](https://github.com/jtf16) - João Freitas
+- [@MarianaCruz](https://github.com/MarianaCruz) - Mariana Cruz
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### About
+The main objective is to emulate, using Netkit, a representative network of a small company.
 
-### Markdown
+This project has two parts:
+  1. In the first part we will configure several computers, network devices and services such as File Transfer Protocol (FTP), E-mail, Network Monitoring, Proxy, Domain Name System (DNS), Hyper Text Transfer Protocol (HTTP) and Dynamic Host Configuration Protocol (DHCP)
+  1. In the second part, the security of the ContaTudo network will be increased, limiting its access to the authorized elements and using safe services. To do so, ContaTudo will need to configure the Firewall service, use Secure Shell (SSH), use Secure Hypertext Transfer Protocol (HTTPS) in accessing your web page, restrict DNS and Proxy usage, and provide a Virtual Private Network (VPN).
+  
+### Requirements
+- Ubuntu operating system with version 14.04 LTS or later
+- Download and install [Netkit - Latest Stable Release](http://wiki.netkit.org/index.php/Download_Official#toc) by following the steps indicated there
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/joaocarlos95/NetworkManagementSecurity-Project/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+### How to run:
+- Enter main directory
+- Run the project - **lstart** 
