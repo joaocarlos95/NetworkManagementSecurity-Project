@@ -8,8 +8,8 @@
 The main objective is to emulate, using Netkit, a representative network of a small company.
 
 This project has two parts:
-  1. In the first part we will configure several computers, network devices and services such as File Transfer Protocol (FTP), E-mail, Network Monitoring, Proxy, Domain Name System (DNS), Hyper Text Transfer Protocol (HTTP) and Dynamic Host Configuration Protocol (DHCP)
-  1. In the second part, the security of the ContaTudo network will be increased, limiting its access to the authorized elements and using safe services. To do so, ContaTudo will need to configure the Firewall service, use Secure Shell (SSH), use Secure Hypertext Transfer Protocol (HTTPS) in accessing your web page, restrict DNS and Proxy usage, and provide a Virtual Private Network (VPN).
+  1. In the first part we will configure several computers, network devices and services such as _File Transfer Protocol_ (FTP), _E-mail_, _Network Monitoring_, _Proxy_, _Domain Name System_ (DNS), _Hyper Text Transfer Protocol_ (HTTP) and _Dynamic Host Configuration Protocol_ (DHCP)
+  1. In the second part, the security of the ContaTudo network will be increased, limiting its access to the authorized elements and using safe services. To do so, ContaTudo network will need to configure the _Firewall_ service, use _Secure Shell_ (SSH), use _Secure Hypertext Transfer Protocol_ (HTTPS) in accessing your web page, restrict _DNS_ and _Proxy_ usage, and provide a _Virtual Private Network_ (VPN).
   
 ### Requirements
 - Ubuntu operating system with version 14.04 LTS or later
