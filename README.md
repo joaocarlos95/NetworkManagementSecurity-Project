@@ -1,6 +1,7 @@
 # Network Management and Security Project (2016-2017)
 
 ### Contributors
+- [@joaocarlos95](https://github.com/joaocarlos95) - João Carlos
 - [@jtf16](https://github.com/jtf16) - João Freitas
 - [@MarianaCruz](https://github.com/MarianaCruz) - Mariana Cruz
 
